@@ -36,6 +36,7 @@ async function getMessage() {
 
     if (data.choices[0].message.content && INPUT_MESSAGES.value) {
       const pElement = document.createElement("p");
+      pElement.classList.add("pointer")
       pElement.textContent = INPUT_MESSAGES.value;
       pElement.addEventListener("click", () =>
         changeInput(pElement.textContent)
